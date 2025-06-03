@@ -1,9 +1,5 @@
 from typing import Dict, List, Any
 from mcp.server.fastmcp import FastMCP
-from fastapi import FastAPI
-
-# Initialize FastAPI Server
-app = FastAPI()
 
 # Initiaize FastMCP Server
 mcp = FastMCP(
@@ -103,10 +99,6 @@ Instructions:
 Provide a clear, concise response with actionable suggestions if applicable.
 """
   
-# if __name__ == '__main__':
-#   # Initialize and run the MCP server
-#   mcp.run(transport='stdio')
-
-# Run the FastAPI server
-app.mount("/", mcp.sse_app())
-
+if __name__ == '__main__':
+  # Initialize and run the MCP server
+  mcp.run(transport='sse')
