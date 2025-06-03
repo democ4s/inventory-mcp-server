@@ -3,6 +3,8 @@ from mcp.server.fastmcp import FastMCP
 
 # Initiaize FastMCP Server
 mcp = FastMCP(
+  host='0.0.0.0',
+  port=8000,
   name='inventory-mcp',
   description='Manages a simple product inventory'
 )
